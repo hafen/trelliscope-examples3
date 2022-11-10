@@ -1,0 +1,157 @@
+__loadDisplayInfo__097af825({
+  "name": "life expectancy",
+  "description": "life expectancy",
+  "tags": [],
+  "key_cols": ["continent", "country"],
+  "metas": [
+    {
+      "locale": true,
+      "digits": 2,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "Mean of annual GDP per capita (US$, inflation-adjusted)",
+      "type": "number",
+      "varname": "mean_gdp"
+    },
+    {
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "Wikipedia country page",
+      "type": "href",
+      "varname": "wiki_link"
+    },
+    {
+      "levels": ["Afghanistan", "Albania", "Algeria", "Angola", "Argentina", "Australia", "Austria", "Bahrain", "Bangladesh", "Belgium", "Benin", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo, Dem. Rep.", "Congo, Rep.", "Costa Rica", "Cote d'Ivoire", "Croatia", "Cuba", "Czech Republic", "Denmark", "Djibouti", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Ethiopia", "Finland", "France", "Gabon", "Gambia", "Germany", "Ghana", "Greece", "Guatemala", "Guinea", "Guinea-Bissau", "Haiti", "Honduras", "Hong Kong, China", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kenya", "Korea, Dem. Rep.", "Korea, Rep.", "Kuwait", "Lebanon", "Lesotho", "Liberia", "Libya", "Madagascar", "Malawi", "Malaysia", "Mali", "Mauritania", "Mauritius", "Mexico", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Panama", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Reunion", "Romania", "Rwanda", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Sierra Leone", "Singapore", "Slovak Republic", "Slovenia", "Somalia", "South Africa", "Spain", "Sri Lanka", "Sudan", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tanzania", "Thailand", "Togo", "Trinidad and Tobago", "Tunisia", "Turkey", "Uganda", "United Kingdom", "United States", "Uruguay", "Venezuela", "Vietnam", "West Bank and Gaza", "Yemen, Rep.", "Zambia", "Zimbabwe"],
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "country",
+      "type": "factor",
+      "varname": "country"
+    },
+    {
+      "levels": ["Africa", "Americas", "Asia", "Europe", "Oceania"],
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "continent",
+      "type": "factor",
+      "varname": "continent"
+    },
+    {
+      "locale": true,
+      "digits": null,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "Mean of annual life expectancies",
+      "type": "number",
+      "varname": "mean_lifeexp"
+    },
+    {
+      "locale": true,
+      "digits": null,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "Lowest observed annual life expectancy",
+      "type": "number",
+      "varname": "min_lifeexp"
+    }
+  ],
+  "state": {
+    "layout": {
+      "page": 1,
+      "arrange": "rows",
+      "ncol": 5,
+      "nrow": 3,
+      "type": "layout"
+    },
+    "labels": {
+      "varnames": ["country", "continent", "wiki_link"],
+      "type": "labels"
+    },
+    "sort": [
+      {
+        "dir": "asc",
+        "varname": "continent",
+        "type": "sort"
+      },
+      {
+        "dir": "desc",
+        "varname": "mean_lifeexp",
+        "type": "sort"
+      }
+    ],
+    "filter": [
+      {
+        "values": ["Africa"],
+        "regexp": null,
+        "filtertype": "category",
+        "varname": "continent",
+        "type": "filter"
+      },
+      {
+        "max": 50,
+        "min": null,
+        "filtertype": "numberrange",
+        "varname": "mean_lifeexp",
+        "type": "filter"
+      }
+    ]
+  },
+  "views": [
+    {
+      "name": "Countries with high life expectancy (min >= 60)",
+      "state": {
+        "layout": {
+          "page": 1,
+          "arrange": "rows",
+          "ncol": 3,
+          "nrow": 2,
+          "type": "layout"
+        },
+        "labels": {
+          "varnames": ["continent", "country"],
+          "type": "labels"
+        },
+        "sort": [
+          {
+            "dir": "desc",
+            "varname": "min_lifeexp",
+            "type": "sort"
+          }
+        ],
+        "filter": [
+          {
+            "max": null,
+            "min": 60,
+            "filtertype": "numberrange",
+            "varname": "min_lifeexp",
+            "type": "filter"
+          }
+        ]
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "height": 6,
+      "width": 100,
+      "type": "text",
+      "active": true,
+      "label": "Comments about this panel",
+      "name": "comments"
+    },
+    {
+      "options": ["no", "yes"],
+      "type": "radio",
+      "active": true,
+      "label": "Does the data look correct?",
+      "name": "looks_correct"
+    }
+  ],
+  "panel_type": "img"
+})
