@@ -1,0 +1,58 @@
+__loadDisplayInfo__1060b383({
+  "name": "connections",
+  "description": "connections",
+  "tags": [],
+  "key_cols": ["id"],
+  "key_sig": "f56ee1bf608fcfb3a674dda781a2ebac",
+  "metas": [
+    {
+      "locale": true,
+      "digits": null,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "id",
+      "type": "number",
+      "varname": "id"
+    },
+    {
+      "locale": true,
+      "digits": null,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "n_nodes",
+      "type": "number",
+      "varname": "n_nodes"
+    },
+    {
+      "locale": true,
+      "digits": null,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "tot_conns",
+      "type": "number",
+      "varname": "tot_conns"
+    }
+  ],
+  "state": {
+    "layout": {
+      "page": 1,
+      "arrange": "rows",
+      "ncol": 4,
+      "nrow": 2,
+      "type": "layout"
+    },
+    "labels": {
+      "varnames": ["id"],
+      "type": "labels"
+    },
+    "sort": [],
+    "filter": []
+  },
+  "views": [],
+  "inputs": [],
+  "panel_type": "iframe",
+  "panel_format": "html"
+})

@@ -1,0 +1,296 @@
+__loadDisplayInfo__0d3d4590({
+  "name": "pokemon",
+  "description": "pokemon",
+  "tags": [],
+  "key_cols": ["pokemon"],
+  "key_sig": null,
+  "metas": [
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "pokemon",
+      "type": "string",
+      "varname": "pokemon"
+    },
+    {
+      "locale": true,
+      "digits": null,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "id",
+      "type": "number",
+      "varname": "id"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "species_id",
+      "type": "string",
+      "varname": "species_id"
+    },
+    {
+      "locale": true,
+      "digits": null,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "height",
+      "type": "number",
+      "varname": "height"
+    },
+    {
+      "locale": true,
+      "digits": null,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "weight",
+      "type": "number",
+      "varname": "weight"
+    },
+    {
+      "locale": true,
+      "digits": null,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "base_experience",
+      "type": "number",
+      "varname": "base_experience"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "type_1",
+      "type": "string",
+      "varname": "type_1"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "type_2",
+      "type": "string",
+      "varname": "type_2"
+    },
+    {
+      "locale": true,
+      "digits": null,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "attack",
+      "type": "number",
+      "varname": "attack"
+    },
+    {
+      "locale": true,
+      "digits": null,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "defense",
+      "type": "number",
+      "varname": "defense"
+    },
+    {
+      "locale": true,
+      "digits": null,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "hp",
+      "type": "number",
+      "varname": "hp"
+    },
+    {
+      "locale": true,
+      "digits": null,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "special_attack",
+      "type": "number",
+      "varname": "special_attack"
+    },
+    {
+      "locale": true,
+      "digits": null,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "special_defense",
+      "type": "number",
+      "varname": "special_defense"
+    },
+    {
+      "locale": true,
+      "digits": null,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "speed",
+      "type": "number",
+      "varname": "speed"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "ability_1",
+      "type": "string",
+      "varname": "ability_1"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "ability_2",
+      "type": "string",
+      "varname": "ability_2"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "ability_hidden",
+      "type": "string",
+      "varname": "ability_hidden"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "color_1",
+      "type": "string",
+      "varname": "color_1"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "color_2",
+      "type": "string",
+      "varname": "color_2"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "color_f",
+      "type": "string",
+      "varname": "color_f"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "egg_group_1",
+      "type": "string",
+      "varname": "egg_group_1"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "egg_group_2",
+      "type": "string",
+      "varname": "egg_group_2"
+    },
+    {
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "url_image",
+      "type": "href",
+      "varname": "url_image"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "generation_id",
+      "type": "string",
+      "varname": "generation_id"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "evolves_from_species_id",
+      "type": "string",
+      "varname": "evolves_from_species_id"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "evolution_chain_id",
+      "type": "string",
+      "varname": "evolution_chain_id"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "shape_id",
+      "type": "string",
+      "varname": "shape_id"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "shape",
+      "type": "string",
+      "varname": "shape"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "pokebase",
+      "type": "string",
+      "varname": "pokebase"
+    },
+    {
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "pokedex",
+      "type": "href",
+      "varname": "pokedex"
+    },
+    {
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "panel",
+      "type": "href",
+      "varname": "panel"
+    }
+  ],
+  "state": {
+    "layout": {
+      "page": 1,
+      "arrange": "rows",
+      "ncol": 6,
+      "nrow": 3,
+      "type": "layout"
+    },
+    "labels": {
+      "varnames": ["pokemon"],
+      "type": "labels"
+    },
+    "sort": [],
+    "filter": []
+  },
+  "views": [],
+  "inputs": [],
+  "panel_type": "img",
+  "panel_format": null
+})

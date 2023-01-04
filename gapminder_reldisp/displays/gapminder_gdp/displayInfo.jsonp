@@ -1,0 +1,46 @@
+__loadDisplayInfo__44c922eb({
+  "name": "gapminder_gdp",
+  "description": "GDP vs. year by country using Gapminder data",
+  "tags": [],
+  "key_cols": ["country", "continent"],
+  "key_sig": "7866a87ce7584a10bc2e42674f5ae544",
+  "metas": [
+    {
+      "levels": ["Afghanistan", "Albania", "Algeria", "Angola", "Argentina", "Australia", "Austria", "Bahrain", "Bangladesh", "Belgium", "Benin", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo, Dem. Rep.", "Congo, Rep.", "Costa Rica", "Cote d'Ivoire", "Croatia", "Cuba", "Czech Republic", "Denmark", "Djibouti", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Ethiopia", "Finland", "France", "Gabon", "Gambia", "Germany", "Ghana", "Greece", "Guatemala", "Guinea", "Guinea-Bissau", "Haiti", "Honduras", "Hong Kong, China", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kenya", "Korea, Dem. Rep.", "Korea, Rep.", "Kuwait", "Lebanon", "Lesotho", "Liberia", "Libya", "Madagascar", "Malawi", "Malaysia", "Mali", "Mauritania", "Mauritius", "Mexico", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Panama", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Reunion", "Romania", "Rwanda", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Sierra Leone", "Singapore", "Slovak Republic", "Slovenia", "Somalia", "South Africa", "Spain", "Sri Lanka", "Sudan", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tanzania", "Thailand", "Togo", "Trinidad and Tobago", "Tunisia", "Turkey", "Uganda", "United Kingdom", "United States", "Uruguay", "Venezuela", "Vietnam", "West Bank and Gaza", "Yemen, Rep.", "Zambia", "Zimbabwe"],
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "country",
+      "type": "factor",
+      "varname": "country"
+    },
+    {
+      "levels": ["Africa", "Americas", "Asia", "Europe", "Oceania"],
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "continent",
+      "type": "factor",
+      "varname": "continent"
+    }
+  ],
+  "state": {
+    "layout": {
+      "page": 1,
+      "arrange": "rows",
+      "ncol": 3,
+      "nrow": 2,
+      "type": "layout"
+    },
+    "labels": {
+      "varnames": ["country", "continent"],
+      "type": "labels"
+    },
+    "sort": [],
+    "filter": []
+  },
+  "views": [],
+  "inputs": [],
+  "panel_type": "img",
+  "panel_format": "png"
+})
