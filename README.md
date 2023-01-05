@@ -203,14 +203,4 @@ pk <- pokemon %>%
 
 ## With built JS library
 
-When trelliscope is used outside of the `yarn start` environment, an html page is built that loads the js and css and instantiates a trelliscope app. An example of this is in the `with_build_library` folder of this repo.
 
-The contents of `with_build_library/lib` is empty but you can populate it by issuing the following commands while in the trelliscopejs-lib diretory:
-
-```
-yarn build
-
-cp -r build/static/ __path__/trelliscope-examples2/with_built_library/lib
-```
-
-Then make sure the references in the `<link/>` and `<script/>` tags in `with_build_library/index.html` are pointing to the correct files in `with_built_library/lib`.

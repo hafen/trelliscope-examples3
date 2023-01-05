@@ -60,14 +60,6 @@ __loadDisplayInfo__960f51e6({
       "label": "Lowest observed annual life expectancy",
       "type": "number",
       "varname": "min_lifeexp"
-    },
-    {
-      "sortable": true,
-      "filterable": true,
-      "tags": [],
-      "label": "__PANEL_KEY__",
-      "type": "string",
-      "varname": "__PANEL_KEY__"
     }
   ],
   "state": {
@@ -163,5 +155,6 @@ __loadDisplayInfo__960f51e6({
     }
   ],
   "panel_type": "img",
-  "panel_format": "svg"
+  "panel_format": "svg",
+  "thumbnail_url": "displays/life_expectancy/panels/Asia_Afghanistan.svg"
 })

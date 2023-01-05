@@ -3,6 +3,7 @@ __loadDisplayList__0d3d4590([
     "name": "pokemon",
     "description": "pokemon",
     "tags": [],
-    "key_sig": null
+    "key_sig": null,
+    "thumbnail_url": "http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
   }
 ])
