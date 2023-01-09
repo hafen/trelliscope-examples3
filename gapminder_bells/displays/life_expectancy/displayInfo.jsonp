@@ -2,8 +2,8 @@ __loadDisplayInfo__960f51e6({
   "name": "life expectancy",
   "description": "life expectancy",
   "tags": [],
-  "key_cols": ["continent", "country"],
-  "key_sig": "1258af3315ef6667a81ac39dc24da591",
+  "keycols": ["continent", "country"],
+  "keysig": "1258af3315ef6667a81ac39dc24da591",
   "metas": [
     {
       "locale": true,
@@ -154,7 +154,7 @@ __loadDisplayInfo__960f51e6({
       "name": "looks_correct"
     }
   ],
-  "panel_type": "img",
-  "panel_format": "svg",
-  "thumbnail_url": "displays/life_expectancy/panels/Asia_Afghanistan.svg"
+  "paneltype": "img",
+  "panelformat": "svg",
+  "thumbnailurl": "displays/life_expectancy/panels/Asia_Afghanistan.svg"
 })

@@ -2,8 +2,8 @@ __loadDisplayInfo__1060b383({
   "name": "connections",
   "description": "connections",
   "tags": [],
-  "key_cols": ["id"],
-  "key_sig": "f56ee1bf608fcfb3a674dda781a2ebac",
+  "keycols": ["id"],
+  "keysig": "f56ee1bf608fcfb3a674dda781a2ebac",
   "metas": [
     {
       "locale": true,
@@ -53,7 +53,7 @@ __loadDisplayInfo__1060b383({
   },
   "views": [],
   "inputs": [],
-  "panel_type": "iframe",
-  "panel_format": "html",
-  "thumbnail_url": "displays/connections/panels/29.html"
+  "paneltype": "iframe",
+  "panelformat": "html",
+  "thumbnailurl": "displays/connections/panels/79.html"
 })

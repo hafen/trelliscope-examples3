@@ -2,8 +2,8 @@ __loadDisplayInfo__0d3d4590({
   "name": "pokemon",
   "description": "pokemon",
   "tags": [],
-  "key_cols": ["pokemon"],
-  "key_sig": null,
+  "keycols": ["pokemon"],
+  "keysig": null,
   "metas": [
     {
       "sortable": true,
@@ -291,7 +291,7 @@ __loadDisplayInfo__0d3d4590({
   },
   "views": [],
   "inputs": [],
-  "panel_type": "img",
-  "panel_format": null,
-  "thumbnail_url": "http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+  "paneltype": "img",
+  "panelformat": null,
+  "thumbnailurl": "http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
 })

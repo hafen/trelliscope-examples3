@@ -3,14 +3,14 @@ __loadDisplayList__44c922eb([
     "name": "gapminder_gdp",
     "description": "GDP vs. year by country using Gapminder data",
     "tags": [],
-    "key_sig": "7866a87ce7584a10bc2e42674f5ae544",
-    "thumbnail_url": "displays/gapminder_gdp/panels/Afghanistan_Asia.png"
+    "keysig": "7866a87ce7584a10bc2e42674f5ae544",
+    "thumbnailurl": "displays/gapminder_gdp/panels/Afghanistan_Asia.png"
   },
   {
     "name": "gapminder_life_expectancy",
     "description": "life expectancy vs. year by country using Gapminder data",
     "tags": [],
-    "key_sig": "7866a87ce7584a10bc2e42674f5ae544",
-    "thumbnail_url": "displays/gapminder_life_expectancy/panels/Afghanistan_Asia.png"
+    "keysig": "7866a87ce7584a10bc2e42674f5ae544",
+    "thumbnailurl": "displays/gapminder_life_expectancy/panels/Afghanistan_Asia.png"
   }
 ])

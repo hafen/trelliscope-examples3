@@ -3,7 +3,7 @@ __loadDisplayList__960f51e6([
     "name": "life expectancy",
     "description": "life expectancy",
     "tags": [],
-    "key_sig": "1258af3315ef6667a81ac39dc24da591",
-    "thumbnail_url": "displays/life_expectancy/panels/Asia_Afghanistan.svg"
+    "keysig": "1258af3315ef6667a81ac39dc24da591",
+    "thumbnailurl": "displays/life_expectancy/panels/Asia_Afghanistan.svg"
   }
 ])
