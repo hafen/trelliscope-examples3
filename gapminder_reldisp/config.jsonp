@@ -1,5 +1,5 @@
 __loadAppConfig__44c922eb({
   "name": "Trelliscope App",
-  "data_type": "jsonp",
+  "datatype": "jsonp",
   "id": "44c922eb"
 })
