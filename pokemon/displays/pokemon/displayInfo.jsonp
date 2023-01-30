@@ -290,7 +290,7 @@ __loadDisplayInfo__0d3d4590({
     "filter": []
   },
   "views": [],
-  "inputs": [],
+  "inputs": null,
   "paneltype": "img",
   "panelformat": null,
   "thumbnailurl": "http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"

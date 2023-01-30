@@ -52,7 +52,7 @@ __loadDisplayInfo__1060b383({
     "filter": []
   },
   "views": [],
-  "inputs": [],
+  "inputs": null,
   "paneltype": "iframe",
   "panelformat": "html",
   "thumbnailurl": "displays/connections/panels/58.html"

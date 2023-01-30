@@ -40,7 +40,7 @@ __loadDisplayInfo__44c922eb({
     "filter": []
   },
   "views": [],
-  "inputs": [],
+  "inputs": null,
   "paneltype": "img",
   "panelformat": "png",
   "thumbnailurl": "displays/gapminder_gdp/panels/Afghanistan_Asia.png"

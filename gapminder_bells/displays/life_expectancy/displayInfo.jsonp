@@ -137,23 +137,32 @@ __loadDisplayInfo__960f51e6({
       }
     }
   ],
-  "inputs": [
-    {
-      "height": 6,
-      "width": 100,
-      "type": "text",
-      "active": true,
-      "label": "Comments about this panel",
-      "name": "comments"
+  "inputs": {
+    "storageInterface": {
+      "type": "localStorage"
     },
-    {
-      "options": ["no", "yes"],
-      "type": "radio",
-      "active": true,
-      "label": "Does the data look correct?",
-      "name": "looks_correct"
-    }
-  ],
+    "feedbackInterface": {
+      "emailAddress": "johndoe123@fakemail.com",
+      "includeMetaVars": ["mean_gdp", "country"]
+    },
+    "inputs": [
+      {
+        "height": 6,
+        "width": 100,
+        "type": "text",
+        "active": true,
+        "label": "Comments about this panel",
+        "name": "comments"
+      },
+      {
+        "options": ["no", "yes"],
+        "type": "radio",
+        "active": true,
+        "label": "Does the data look correct?",
+        "name": "looks_correct"
+      }
+    ]
+  },
   "paneltype": "img",
   "panelformat": "svg",
   "thumbnailurl": "displays/life_expectancy/panels/Asia_Afghanistan.svg"
