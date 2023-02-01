@@ -1,0 +1,65 @@
+__loadDisplayInfo__1ebd83ce({
+  "name": "mpg",
+  "description": "mpg",
+  "tags": [],
+  "keycols": ["class"],
+  "keysig": "86e44775e191631c1282002f87f57ecb",
+  "metas": [
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "class",
+      "type": "string",
+      "varname": "class"
+    },
+    {
+      "locale": true,
+      "digits": null,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "mean_cty",
+      "type": "number",
+      "varname": "mean_cty"
+    },
+    {
+      "locale": true,
+      "digits": null,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "min_cty",
+      "type": "number",
+      "varname": "min_cty"
+    },
+    {
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "wiki_link",
+      "type": "href",
+      "varname": "wiki_link"
+    }
+  ],
+  "state": {
+    "layout": {
+      "page": 1,
+      "arrange": "rows",
+      "ncol": 3,
+      "nrow": 2,
+      "type": "layout"
+    },
+    "labels": {
+      "varnames": ["class"],
+      "type": "labels"
+    },
+    "sort": [],
+    "filter": []
+  },
+  "views": [],
+  "inputs": null,
+  "paneltype": "img",
+  "panelformat": "svg",
+  "thumbnailurl": "displays/mpg/panels/compact.svg"
+})
