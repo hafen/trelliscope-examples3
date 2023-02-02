@@ -138,13 +138,6 @@ __loadDisplayInfo__960f51e6({
     }
   ],
   "inputs": {
-    "storageInterface": {
-      "type": "localStorage"
-    },
-    "feedbackInterface": {
-      "emailAddress": "johndoe123@fakemail.com",
-      "includeMetaVars": ["mean_gdp", "country"]
-    },
     "inputs": [
       {
         "height": 6,
@@ -161,9 +154,17 @@ __loadDisplayInfo__960f51e6({
         "label": "Does the data look correct?",
         "name": "looks_correct"
       }
-    ]
+    ],
+    "storageInterface": {
+      "type": "localStorage"
+    },
+    "feedbackInterface": {
+      "feedbackEmail": "johndoe123@fakemail.net",
+      "includeMetaVars": []
+    }
   },
   "paneltype": "img",
   "panelformat": "svg",
+  "panelaspect": 1.6,
   "thumbnailurl": "displays/life_expectancy/panels/Asia_Afghanistan.svg"
 })

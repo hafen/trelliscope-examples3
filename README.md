@@ -92,6 +92,7 @@ disp <- (ggplot(aes(year, lifeExp), data = gapminder) +
     input_radio(name = "looks_correct",
       label = "Does the data look correct?", options = c("no", "yes"))
   ) |>
+  add_input_email("johndoe123@fakemail.net") |>
   write_display()
 ```
 
@@ -185,6 +186,7 @@ nodedat %>%
   arrange(-n_nodes) %>%
   trelliscope(name = "connections",
     path = "network_nonraster") |>
+  write_panels(width = 500, height = 500) |>
   set_default_layout(nrow = 2, ncol = 4) |>
   write_display()
 ```

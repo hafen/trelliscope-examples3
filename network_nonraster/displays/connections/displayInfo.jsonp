@@ -55,5 +55,6 @@ __loadDisplayInfo__1060b383({
   "inputs": null,
   "paneltype": "iframe",
   "panelformat": "html",
-  "thumbnailurl": "displays/connections/panels/58.html"
+  "panelaspect": 1,
+  "thumbnailurl": "displays/connections/panels/72.html"
 })

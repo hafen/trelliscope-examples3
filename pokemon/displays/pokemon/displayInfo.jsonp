@@ -264,14 +264,6 @@ __loadDisplayInfo__0d3d4590({
       "label": "pokedex",
       "type": "href",
       "varname": "pokedex"
-    },
-    {
-      "sortable": false,
-      "filterable": false,
-      "tags": [],
-      "label": "panel",
-      "type": "href",
-      "varname": "panel"
     }
   ],
   "state": {
@@ -293,5 +285,6 @@ __loadDisplayInfo__0d3d4590({
   "inputs": null,
   "paneltype": "img",
   "panelformat": null,
+  "panelaspect": 1.5,
   "thumbnailurl": "http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
 })

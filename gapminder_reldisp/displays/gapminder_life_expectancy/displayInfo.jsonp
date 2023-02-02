@@ -43,5 +43,6 @@ __loadDisplayInfo__44c922eb({
   "inputs": null,
   "paneltype": "img",
   "panelformat": "png",
+  "panelaspect": 1.6,
   "thumbnailurl": "displays/gapminder_life_expectancy/panels/Afghanistan_Asia.png"
 })
