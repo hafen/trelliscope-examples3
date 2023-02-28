@@ -1,4 +1,4 @@
-__loadDisplayInfo__960f51e6({
+__loadDisplayInfo__81d68b4e({
   "name": "life expectancy",
   "description": "life expectancy",
   "tags": [],
@@ -27,7 +27,7 @@ __loadDisplayInfo__960f51e6({
       "levels": ["Afghanistan", "Albania", "Algeria", "Angola", "Argentina", "Australia", "Austria", "Bahrain", "Bangladesh", "Belgium", "Benin", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo, Dem. Rep.", "Congo, Rep.", "Costa Rica", "Cote d'Ivoire", "Croatia", "Cuba", "Czech Republic", "Denmark", "Djibouti", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Ethiopia", "Finland", "France", "Gabon", "Gambia", "Germany", "Ghana", "Greece", "Guatemala", "Guinea", "Guinea-Bissau", "Haiti", "Honduras", "Hong Kong, China", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kenya", "Korea, Dem. Rep.", "Korea, Rep.", "Kuwait", "Lebanon", "Lesotho", "Liberia", "Libya", "Madagascar", "Malawi", "Malaysia", "Mali", "Mauritania", "Mauritius", "Mexico", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Panama", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Reunion", "Romania", "Rwanda", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Sierra Leone", "Singapore", "Slovak Republic", "Slovenia", "Somalia", "South Africa", "Spain", "Sri Lanka", "Sudan", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tanzania", "Thailand", "Togo", "Trinidad and Tobago", "Tunisia", "Turkey", "Uganda", "United Kingdom", "United States", "Uruguay", "Venezuela", "Vietnam", "West Bank and Gaza", "Yemen, Rep.", "Zambia", "Zimbabwe"],
       "sortable": true,
       "filterable": true,
-      "tags": [],
+      "tags": ["geography"],
       "label": "country",
       "type": "factor",
       "varname": "country"
@@ -36,7 +36,7 @@ __loadDisplayInfo__960f51e6({
       "levels": ["Africa", "Americas", "Asia", "Europe", "Oceania"],
       "sortable": true,
       "filterable": true,
-      "tags": [],
+      "tags": ["geography"],
       "label": "continent",
       "type": "factor",
       "varname": "continent"
@@ -46,7 +46,7 @@ __loadDisplayInfo__960f51e6({
       "digits": null,
       "sortable": true,
       "filterable": true,
-      "tags": [],
+      "tags": ["statistics", "life expectancy"],
       "label": "Mean of annual life expectancy",
       "type": "number",
       "varname": "mean_lifeexp"
@@ -56,10 +56,44 @@ __loadDisplayInfo__960f51e6({
       "digits": null,
       "sortable": true,
       "filterable": true,
-      "tags": [],
+      "tags": ["statistics", "life expectancy"],
       "label": "Lowest observed annual life expectancy",
       "type": "number",
       "varname": "min_lifeexp"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "start_dt",
+      "type": "date",
+      "varname": "start_dt"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "end_dt",
+      "type": "date",
+      "varname": "end_dt"
+    },
+    {
+      "timezone": "UTC",
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "start_dttm",
+      "type": "datetime",
+      "varname": "start_dttm"
+    },
+    {
+      "timezone": "UTC",
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "end_dttm",
+      "type": "datetime",
+      "varname": "end_dttm"
     }
   ],
   "state": {

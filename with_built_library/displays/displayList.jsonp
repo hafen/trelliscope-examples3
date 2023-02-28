@@ -1,9 +1,9 @@
-__loadDisplayList__1ebd83ce([
+__loadDisplayList__0d3d4590([
   {
-    "name": "mpg",
-    "description": "mpg",
+    "name": "pokemon",
+    "description": "pokemon",
     "tags": [],
-    "keysig": "86e44775e191631c1282002f87f57ecb",
-    "thumbnailurl": "displays/mpg/panels/compact.svg"
+    "keysig": null,
+    "thumbnailurl": "http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
   }
 ])

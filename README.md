@@ -45,6 +45,12 @@ library(trelliscope)
 library(tidyverse)
 library(gapminder)
 
+gapminder2 <- gapminder %>%
+  mutate(
+    yeardate = as.Date(paste0(year, "-01-01")),
+    yeardatetime = as.POSIXct(yeardate, tz = "UTC") + 1
+  )
+
 disp <- (ggplot(aes(year, lifeExp), data = gapminder) +
   geom_point() +
   facet_trelliscope(~ continent + country)) |>
@@ -94,6 +100,8 @@ disp <- (ggplot(aes(year, lifeExp), data = gapminder) +
   ) |>
   add_input_email("johndoe123@fakemail.net") |>
   write_display()
+
+view_display(disp)
 ```
 
 ## Multiple dislays and related displays
@@ -107,7 +115,7 @@ On this same topic, there is the notion of "related displays", where if you crea
 For example, we can create two displays with the gapminder data, one with life expectancy vs. time and another with GBP vs. time:
 
 ```r
-(ggplot(gapminder, aes(year, lifeExp)) +
+disp1 <- (ggplot(gapminder, aes(year, lifeExp)) +
   geom_point() +
   xlim(1948, 2011) + ylim(10, 95) + theme_bw() +
   facet_trelliscope(~ country + continent)) |>
@@ -120,7 +128,7 @@ For example, we can create two displays with the gapminder data, one with life e
   write_panels(width = 800, height = 500) |>
   write_display()
 
-(ggplot(gapminder, aes(year, log10(gdpPercap))) +
+disp2 <- (ggplot(gapminder, aes(year, log10(gdpPercap))) +
   geom_point() +
   xlim(1948, 2011) + ylim(2.35, 5.1) + theme_bw() +
   facet_trelliscope(~ country + continent)) |>
@@ -132,6 +140,9 @@ For example, we can create two displays with the gapminder data, one with life e
   ) |>
   write_panels(width = 800, height = 500) |>
   write_display()
+
+view_display(disp1)
+view_display(disp2)
 ```
 
 When the display opens, choose either display to view. Then click the folder icon with a plus sign that can be found in the top left toolbar, and choose the second display. Now each display will be shown side-by-side for each country. Note that when using related diplays, the panel layout is forced to one row and one column.
@@ -182,13 +193,15 @@ nodedat <- edges %>%
 
 network_plot(1)
 
-nodedat %>%
+disp3 <- nodedat %>%
   arrange(-n_nodes) %>%
   trelliscope(name = "connections",
     path = "network_nonraster") |>
   write_panels(width = 500, height = 500) |>
   set_default_layout(nrow = 2, ncol = 4) |>
   write_display()
+
+view_display(disp3)
 ```
 
 ## Image panels
@@ -201,6 +214,8 @@ pk <- pokemon %>%
   trelliscope(name = "pokemon", path = "pokemon") |>
   set_default_layout(nrow = 3, ncol = 6) |>
   write_display()
+
+view_display(pk)
 ```
 
 ## With built JS library

@@ -1,4 +1,4 @@
-__loadDisplayInfo__1060b383({
+__loadDisplayInfo__3a3019d9({
   "name": "connections",
   "description": "connections",
   "tags": [],
@@ -56,5 +56,5 @@ __loadDisplayInfo__1060b383({
   "paneltype": "iframe",
   "panelformat": "html",
   "panelaspect": 1,
-  "thumbnailurl": "displays/connections/panels/72.html"
+  "thumbnailurl": "displays/connections/panels/15.html"
 })
