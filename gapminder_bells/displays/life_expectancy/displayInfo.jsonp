@@ -6,13 +6,12 @@ __loadDisplayInfo__81d68b4e({
   "keysig": "1258af3315ef6667a81ac39dc24da591",
   "metas": [
     {
-      "locale": true,
-      "digits": 2,
+      "code": "USD",
       "sortable": true,
       "filterable": true,
       "tags": ["statistics", "GDP"],
       "label": "Mean of annual GDP per capita (US$, inflation-adjusted)",
-      "type": "number",
+      "type": "currency",
       "varname": "mean_gdp"
     },
     {
@@ -199,6 +198,6 @@ __loadDisplayInfo__81d68b4e({
   },
   "paneltype": "img",
   "panelformat": "svg",
-  "panelaspect": 1.6,
+  "panelaspect": null,
   "thumbnailurl": "displays/life_expectancy/panels/Asia_Afghanistan.svg"
 })
