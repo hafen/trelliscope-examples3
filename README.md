@@ -44,12 +44,13 @@ Displays can have so many cognostics to the point that it is difficult to find a
 # mix up dates so we can test sorting
 scramble <- function(x)
   x + sample(-10:10, length(x), replace = TRUE)
+cent <- readr::read_csv("country_centroids.csv")
 
 library(trelliscope)
 library(tidyverse)
 library(gapminder)
 
-x <- (ggplot(aes(year, lifeExp), data = gapminder) +
+p <- (ggplot(aes(year, lifeExp), data = gapminder) +
   geom_point() +
   theme_minimal() +
   facet_panels(~ continent + country)) |>
@@ -65,24 +66,27 @@ stats <- gapminder |>
     mean_lifeexp = mean(lifeExp),
     min_lifeexp = min(lifeExp),
     mean_gdp = mean(gdpPercap),
+    test = log10(mean(gdpPercap)),
     start_dt = scramble(min(yeardate)),
     end_dt = scramble(max(yeardate)),
     start_dttm = as.POSIXct(start_dt),
     end_dttm = as.POSIXct(end_dt),
     wiki_link = paste0("https://en.wikipedia.org/wiki/", country[1]),
     .groups = "drop"
-  )
+  ) %>%
+  left_join(select(cent, -country), by = c(country = "name"))
 
-x <- left_join(x, stats, by = c("country", "continent"))
+x <- left_join(p, stats, by = c("country", "continent"))
 
-x <- x |>
+xtr <- x |>
   as_trelliscope_df(name = "life expectancy", path = "gapminder_bells") |>
   write_panels(width = 800, height = 500, format = "svg") |>
   add_meta_defs(
-    meta_currency("mean_gdp",
-      label = "Mean of annual GDP per capita (US$, inflation-adjusted)",
-      tags = c("statistics", "GDP")),
-    meta_href("wiki_link", label = "Wikipedia country page")
+    # meta_currency("mean_gdp",
+    #   label = "Mean of annual GDP per capita (US$, inflation-adjusted)",
+    #   tags = c("statistics", "GDP")),
+    meta_href("wiki_link", label = "Wikipedia country page"),
+    meta_geo("geo_centroid", latvar = "latitude", longvar = "longitude")
   ) |>
   add_meta_labels(
     mean_lifeexp = "Mean of annual life expectancy",
@@ -207,7 +211,7 @@ nodedat <- edges |>
 
 network_plot(1)
 
-disp3 <- nodedat |>
+x3 <- nodedat |>
   arrange(-n_nodes) |>
   as_trelliscope_df(name = "connections",
     path = "network_nonraster") |>
@@ -215,7 +219,7 @@ disp3 <- nodedat |>
   set_default_layout(nrow = 2, ncol = 4) |>
   write_trelliscope()
 
-view_trelliscope(disp3)
+view_trelliscope(x3)
 ```
 
 ## Image panels
