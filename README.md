@@ -41,32 +41,46 @@ Displays can have so many cognostics to the point that it is difficult to find a
 
 ```{r}
 
+# mix up dates so we can test sorting
+scramble <- function(x)
+  x + sample(-10:10, length(x), replace = TRUE)
+
 library(trelliscope)
 library(tidyverse)
 library(gapminder)
 
-gapminder2 <- gapminder %>%
+x <- (ggplot(aes(year, lifeExp), data = gapminder) +
+  geom_point() +
+  theme_minimal() +
+  facet_panels(~ continent + country)) |>
+  nest_panels()
+
+set.seed(1234)
+stats <- gapminder |>
   mutate(
     yeardate = as.Date(paste0(year, "-01-01")),
-    yeardatetime = as.POSIXct(yeardate, tz = "UTC") + 1
+  ) |>
+  group_by(country, continent) |>
+  summarise(
+    mean_lifeexp = mean(lifeExp),
+    min_lifeexp = min(lifeExp),
+    mean_gdp = mean(gdpPercap),
+    start_dt = scramble(min(yeardate)),
+    end_dt = scramble(max(yeardate)),
+    start_dttm = as.POSIXct(start_dt),
+    end_dttm = as.POSIXct(end_dt),
+    wiki_link = paste0("https://en.wikipedia.org/wiki/", country[1]),
+    .groups = "drop"
   )
 
-disp <- (ggplot(aes(year, lifeExp), data = gapminder) +
-  geom_point() +
-  facet_trelliscope(~ continent + country)) |>
-  build_panels() |>
-  mutate(
-    mean_lifeexp = purrr::map_dbl(data, ~ mean(.x$lifeExp)),
-    min_lifeexp = purrr::map_dbl(data, ~ min(.x$lifeExp)),
-    mean_gdp = purrr::map_dbl(data, ~ mean(.x$gdpPercap)),
-    wiki_link = paste0("https://en.wikipedia.org/wiki/", country)
-  ) |>
-  trelliscope(name = "life expectancy", path = "gapminder_bells") |>
+x <- left_join(x, stats, by = c("country", "continent"))
+
+x <- x |>
+  as_trelliscope_df(name = "life expectancy", path = "gapminder_bells") |>
   write_panels(width = 800, height = 500, format = "svg") |>
   add_meta_defs(
-    meta_number("mean_gdp",
+    meta_currency("mean_gdp",
       label = "Mean of annual GDP per capita (US$, inflation-adjusted)",
-      digits = 2,
       tags = c("statistics", "GDP")),
     meta_href("wiki_link", label = "Wikipedia country page")
   ) |>
@@ -99,9 +113,9 @@ disp <- (ggplot(aes(year, lifeExp), data = gapminder) +
       label = "Does the data look correct?", options = c("no", "yes"))
   ) |>
   add_input_email("johndoe123@fakemail.net") |>
-  write_display()
+  write_trelliscope()
 
-view_display(disp)
+view_trelliscope(x)
 ```
 
 ## Multiple dislays and related displays
@@ -115,34 +129,34 @@ On this same topic, there is the notion of "related displays", where if you crea
 For example, we can create two displays with the gapminder data, one with life expectancy vs. time and another with GBP vs. time:
 
 ```r
-disp1 <- (ggplot(gapminder, aes(year, lifeExp)) +
+x1 <- (ggplot(gapminder, aes(year, lifeExp)) +
   geom_point() +
-  xlim(1948, 2011) + ylim(10, 95) + theme_bw() +
-  facet_trelliscope(~ country + continent)) |>
-  build_panels() |>
-  trelliscope(
+  xlim(1948, 2011) + ylim(10, 95) + theme_minimal() +
+  facet_panels(~ country + continent)) |>
+  nest_panels() |>
+  as_trelliscope_df(
     name = "gapminder_life_expectancy",
     desc = "life expectancy vs. year by country using Gapminder data",
     path = "gapminder_reldisp"
   ) |>
-  write_panels(width = 800, height = 500) |>
-  write_display()
+  write_panels(width = 800, height = 500, format = "svg") |>
+  write_trelliscope()
 
-disp2 <- (ggplot(gapminder, aes(year, log10(gdpPercap))) +
+x2 <- (ggplot(gapminder, aes(year, log10(gdpPercap))) +
   geom_point() +
-  xlim(1948, 2011) + ylim(2.35, 5.1) + theme_bw() +
-  facet_trelliscope(~ country + continent)) |>
-  build_panels() |>
-  trelliscope(
+  xlim(1948, 2011) + ylim(2.35, 5.1) + theme_minimal() +
+  facet_panels(~ country + continent)) |>
+  nest_panels() |>
+  as_trelliscope_df(
     name = "gapminder_gdp",
     desc = "GDP vs. year by country using Gapminder data",
     path = "gapminder_reldisp"
   ) |>
-  write_panels(width = 800, height = 500) |>
-  write_display()
+  write_panels(width = 800, height = 500, format = "svg") |>
+  write_trelliscope()
 
-view_display(disp1)
-view_display(disp2)
+view_trelliscope(x1)
+view_trelliscope(x2)
 ```
 
 When the display opens, choose either display to view. Then click the folder icon with a plus sign that can be found in the top left toolbar, and choose the second display. Now each display will be shown side-by-side for each country. Note that when using related diplays, the panel layout is forced to one row and one column.
@@ -162,46 +176,46 @@ nodes <- data.frame(
   label = 1:nnodes, value = rep(1, nnodes))
 edges <- data.frame(
   from = sample(1:nnodes, nnedges, replace = T),
-  to = sample(1:nnodes, nnedges, replace = T)) %>%
-    group_by(from, to) %>%
+  to = sample(1:nnodes, nnedges, replace = T)) |>
+    group_by(from, to) |>
     summarise(value = n())
 
 network_plot <- function(id, hide_select = TRUE) {
   style <- ifelse(hide_select,
     "visibility: hidden; position: absolute", "")
 
-  visNetwork(nodes, edges) %>%
-    visIgraphLayout(layout = "layout_in_circle") %>%
+  visNetwork(nodes, edges) |>
+    visIgraphLayout(layout = "layout_in_circle") |>
     visNodes(fixed = TRUE,
       label = id,
       scaling = list(
         min = 20, max = 50,
         label = list(min = 35, max = 70,
-          drawThreshold = 1, maxVisible = 100))) %>%
-    visEdges(scaling = list(min = 5, max = 30)) %>%
+          drawThreshold = 1, maxVisible = 100))) |>
+    visEdges(scaling = list(min = 5, max = 30)) |>
     visOptions(highlightNearest = list(enabled = TRUE, degree = 0,
       hideColor = "rgba(200,200,200,0.2)"),
       nodesIdSelection = list(selected = as.character(id), style = style))
 }
 
-nodedat <- edges %>%
-  group_by(from) %>%
-  summarise(n_nodes = n(), tot_conns = sum(value)) %>%
-  rename(id = from) %>%
-  arrange(-n_nodes) %>%
+nodedat <- edges |>
+  group_by(from) |>
+  summarise(n_nodes = n(), tot_conns = sum(value)) |>
+  rename(id = from) |>
+  arrange(-n_nodes) |>
   mutate(panel = map_plot(id, network_plot))
 
 network_plot(1)
 
-disp3 <- nodedat %>%
-  arrange(-n_nodes) %>%
-  trelliscope(name = "connections",
+disp3 <- nodedat |>
+  arrange(-n_nodes) |>
+  as_trelliscope_df(name = "connections",
     path = "network_nonraster") |>
   write_panels(width = 500, height = 500) |>
   set_default_layout(nrow = 2, ncol = 4) |>
-  write_display()
+  write_trelliscope()
 
-view_display(disp3)
+view_trelliscope(disp3)
 ```
 
 ## Image panels
@@ -209,13 +223,13 @@ view_display(disp3)
 ```r
 load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_7261/datasets/pokemon.Rdata"))
 
-pk <- pokemon %>%
-  mutate(panel = img_panel(url_image)) %>%
-  trelliscope(name = "pokemon", path = "pokemon") |>
+pk <- pokemon |>
+  mutate(panel = img_panel(url_image)) |>
+  as_trelliscope_df(name = "pokemon", path = "pokemon") |>
   set_default_layout(nrow = 3, ncol = 6) |>
-  write_display()
+  write_trelliscope()
 
-view_display(pk)
+view_trelliscope(pk)
 ```
 
 ## With built JS library

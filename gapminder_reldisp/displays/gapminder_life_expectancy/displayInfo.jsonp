@@ -42,7 +42,7 @@ __loadDisplayInfo__69d73621({
   "views": [],
   "inputs": null,
   "paneltype": "img",
-  "panelformat": "png",
-  "panelaspect": null,
-  "thumbnailurl": "displays/gapminder_life_expectancy/panels/Afghanistan_Asia.png"
+  "panelformat": "svg",
+  "panelaspect": 1.6,
+  "thumbnailurl": "displays/gapminder_life_expectancy/panels/Afghanistan_Asia.svg"
 })

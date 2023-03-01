@@ -6,15 +6,6 @@ __loadDisplayInfo__81d68b4e({
   "keysig": "1258af3315ef6667a81ac39dc24da591",
   "metas": [
     {
-      "code": "USD",
-      "sortable": true,
-      "filterable": true,
-      "tags": ["statistics", "GDP"],
-      "label": "Mean of annual GDP per capita (US$, inflation-adjusted)",
-      "type": "currency",
-      "varname": "mean_gdp"
-    },
-    {
       "sortable": false,
       "filterable": false,
       "tags": [],
@@ -59,6 +50,26 @@ __loadDisplayInfo__81d68b4e({
       "label": "Lowest observed annual life expectancy",
       "type": "number",
       "varname": "min_lifeexp"
+    },
+    {
+      "locale": true,
+      "digits": null,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "mean_gdp",
+      "type": "number",
+      "varname": "mean_gdp"
+    },
+    {
+      "locale": true,
+      "digits": null,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "test",
+      "type": "number",
+      "varname": "test"
     },
     {
       "sortable": true,
