@@ -1,4 +1,4 @@
-__loadDisplayInfo__3a3019d9({
+__loadDisplayInfo__0db7d0c1({
   "name": "connections",
   "description": "connections",
   "tags": [],
@@ -6,8 +6,9 @@ __loadDisplayInfo__3a3019d9({
   "keysig": "f56ee1bf608fcfb3a674dda781a2ebac",
   "metas": [
     {
+      "log": false,
       "locale": true,
-      "digits": null,
+      "digits": 0,
       "sortable": true,
       "filterable": true,
       "tags": [],
@@ -16,8 +17,9 @@ __loadDisplayInfo__3a3019d9({
       "varname": "id"
     },
     {
+      "log": false,
       "locale": true,
-      "digits": null,
+      "digits": 0,
       "sortable": true,
       "filterable": true,
       "tags": [],
@@ -26,8 +28,9 @@ __loadDisplayInfo__3a3019d9({
       "varname": "n_nodes"
     },
     {
+      "log": false,
       "locale": true,
-      "digits": null,
+      "digits": 0,
       "sortable": true,
       "filterable": true,
       "tags": [],

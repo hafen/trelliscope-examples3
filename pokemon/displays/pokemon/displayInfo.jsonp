@@ -1,4 +1,4 @@
-__loadDisplayInfo__b2296d6a({
+__loadDisplayInfo__21c8a925({
   "name": "pokemon",
   "description": "pokemon",
   "tags": [],
@@ -14,8 +14,9 @@ __loadDisplayInfo__b2296d6a({
       "varname": "pokemon"
     },
     {
+      "log": false,
       "locale": true,
-      "digits": null,
+      "digits": 0,
       "sortable": true,
       "filterable": true,
       "tags": [],
@@ -32,8 +33,9 @@ __loadDisplayInfo__b2296d6a({
       "varname": "species_id"
     },
     {
+      "log": true,
       "locale": true,
-      "digits": null,
+      "digits": 0,
       "sortable": true,
       "filterable": true,
       "tags": [],
@@ -42,8 +44,9 @@ __loadDisplayInfo__b2296d6a({
       "varname": "height"
     },
     {
+      "log": true,
       "locale": true,
-      "digits": null,
+      "digits": 0,
       "sortable": true,
       "filterable": true,
       "tags": [],
@@ -52,8 +55,9 @@ __loadDisplayInfo__b2296d6a({
       "varname": "weight"
     },
     {
+      "log": false,
       "locale": true,
-      "digits": null,
+      "digits": 0,
       "sortable": true,
       "filterable": true,
       "tags": [],
@@ -78,8 +82,9 @@ __loadDisplayInfo__b2296d6a({
       "varname": "type_2"
     },
     {
+      "log": false,
       "locale": true,
-      "digits": null,
+      "digits": 0,
       "sortable": true,
       "filterable": true,
       "tags": [],
@@ -88,8 +93,9 @@ __loadDisplayInfo__b2296d6a({
       "varname": "attack"
     },
     {
+      "log": false,
       "locale": true,
-      "digits": null,
+      "digits": 0,
       "sortable": true,
       "filterable": true,
       "tags": [],
@@ -98,8 +104,9 @@ __loadDisplayInfo__b2296d6a({
       "varname": "defense"
     },
     {
+      "log": false,
       "locale": true,
-      "digits": null,
+      "digits": 0,
       "sortable": true,
       "filterable": true,
       "tags": [],
@@ -108,8 +115,9 @@ __loadDisplayInfo__b2296d6a({
       "varname": "hp"
     },
     {
+      "log": false,
       "locale": true,
-      "digits": null,
+      "digits": 0,
       "sortable": true,
       "filterable": true,
       "tags": [],
@@ -118,8 +126,9 @@ __loadDisplayInfo__b2296d6a({
       "varname": "special_attack"
     },
     {
+      "log": false,
       "locale": true,
-      "digits": null,
+      "digits": 0,
       "sortable": true,
       "filterable": true,
       "tags": [],
@@ -128,8 +137,9 @@ __loadDisplayInfo__b2296d6a({
       "varname": "special_defense"
     },
     {
+      "log": false,
       "locale": true,
-      "digits": null,
+      "digits": 0,
       "sortable": true,
       "filterable": true,
       "tags": [],

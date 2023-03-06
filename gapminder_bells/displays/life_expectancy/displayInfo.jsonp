@@ -1,4 +1,4 @@
-__loadDisplayInfo__81d68b4e({
+__loadDisplayInfo__9bdb39b4({
   "name": "life expectancy",
   "description": "life expectancy",
   "tags": [],
@@ -41,8 +41,9 @@ __loadDisplayInfo__81d68b4e({
       "varname": "continent"
     },
     {
+      "log": false,
       "locale": true,
-      "digits": null,
+      "digits": 1,
       "sortable": true,
       "filterable": true,
       "tags": ["statistics", "life expectancy"],
@@ -51,8 +52,9 @@ __loadDisplayInfo__81d68b4e({
       "varname": "mean_lifeexp"
     },
     {
+      "log": false,
       "locale": true,
-      "digits": null,
+      "digits": 1,
       "sortable": true,
       "filterable": true,
       "tags": ["statistics", "life expectancy"],
@@ -61,8 +63,9 @@ __loadDisplayInfo__81d68b4e({
       "varname": "min_lifeexp"
     },
     {
+      "log": true,
       "locale": true,
-      "digits": null,
+      "digits": 0,
       "sortable": true,
       "filterable": true,
       "tags": [],
@@ -71,8 +74,9 @@ __loadDisplayInfo__81d68b4e({
       "varname": "mean_gdp"
     },
     {
+      "log": false,
       "locale": true,
-      "digits": null,
+      "digits": 3,
       "sortable": true,
       "filterable": true,
       "tags": [],
@@ -115,8 +119,9 @@ __loadDisplayInfo__81d68b4e({
       "varname": "end_dttm"
     },
     {
+      "log": false,
       "locale": true,
-      "digits": null,
+      "digits": 1,
       "sortable": true,
       "filterable": true,
       "tags": [],
@@ -125,8 +130,9 @@ __loadDisplayInfo__81d68b4e({
       "varname": "latitude"
     },
     {
+      "log": false,
       "locale": true,
-      "digits": null,
+      "digits": 1,
       "sortable": true,
       "filterable": true,
       "tags": [],
@@ -238,6 +244,6 @@ __loadDisplayInfo__81d68b4e({
   },
   "paneltype": "img",
   "panelformat": "svg",
-  "panelaspect": null,
+  "panelaspect": 1.6,
   "thumbnailurl": "displays/life_expectancy/panels/Asia_Afghanistan.svg"
 })

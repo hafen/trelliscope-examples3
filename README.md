@@ -119,7 +119,7 @@ xtr <- x |>
   add_input_email("johndoe123@fakemail.net") |>
   write_trelliscope()
 
-view_trelliscope(x)
+view_trelliscope(xtr)
 ```
 
 ## Multiple dislays and related displays
@@ -226,6 +226,11 @@ view_trelliscope(x3)
 
 ```r
 load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_7261/datasets/pokemon.Rdata"))
+
+
+pokemon |>
+  mutate(evolves_from_species_id = as.integer(evolves_from_species_id))
+
 
 pk <- pokemon |>
   mutate(panel = img_panel(url_image)) |>
