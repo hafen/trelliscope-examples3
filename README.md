@@ -40,15 +40,14 @@ Currently annotations made by the user are only stored in local storage and ther
 Displays can have so many cognostics to the point that it is difficult to find a cognostic you might want to filter or sort on. You can now specify cognostic "groups" that will help visually organize how the cognostics are shown in the sort and filter sidebars. Below I'm using `auto_cog = TRUE` which will analyze what is being plotted and create relavent statistical summaries and place them into groups.
 
 ```{r}
+library(trelliscope)
+library(tidyverse)
+library(gapminder)
 
 # mix up dates so we can test sorting
 scramble <- function(x)
   x + sample(-10:10, length(x), replace = TRUE)
 cent <- readr::read_csv("country_centroids.csv")
-
-library(trelliscope)
-library(tidyverse)
-library(gapminder)
 
 p <- (ggplot(aes(year, lifeExp), data = gapminder) +
   geom_point() +
@@ -239,6 +238,57 @@ pk <- pokemon |>
   write_trelliscope()
 
 view_trelliscope(pk)
+```
+
+## Missing values
+
+```r
+gapminder2 <- gapminder
+gapminder2$country[c(2, 456, 78, 23, 789, 132)] <- NA
+gapminder2$continent[c(543, 567, 12, 89, 7, 234)] <- NA
+
+p <- (ggplot(aes(year, lifeExp), data = gapminder2) +
+  geom_point() +
+  theme_minimal() +
+  facet_panels(~ continent + country)) |>
+  nest_panels()
+
+stats <- gapminder2 |>
+  mutate(
+    yeardate = as.Date(paste0(year, "-01-01")),
+  ) |>
+  group_by(country, continent) |>
+  summarise(
+    mean_lifeexp = mean(lifeExp),
+    min_lifeexp = min(lifeExp),
+    mean_gdp = mean(gdpPercap),
+    test = log10(mean(gdpPercap)),
+    start_dt = scramble(min(yeardate)),
+    end_dt = scramble(max(yeardate)),
+    start_dttm = as.POSIXct(start_dt),
+    end_dttm = as.POSIXct(end_dt),
+    wiki_link = paste0("https://en.wikipedia.org/wiki/", country[1]),
+    .groups = "drop"
+  ) %>%
+  left_join(select(cent, -country), by = c(country = "name"))
+
+x <- left_join(p, stats, by = c("country", "continent"))
+
+xtr <- x |>
+  as_trelliscope_df(name = "life expectancy", path = "gapminder_na") |>
+  write_panels(width = 800, height = 500, format = "svg") |>
+  add_meta_defs(
+    meta_href("wiki_link", label = "Wikipedia country page")
+  ) |>
+  set_default_labels(c("country", "continent", "wiki_link")) |>
+  set_default_layout(nrow = 3, ncol = 5) |>
+  set_default_sort(c("continent", "mean_lifeexp"), dir = c("asc", "desc")) |>
+  set_default_filters(
+    filter_range("mean_lifeexp", max = 50)
+  ) |>
+  write_trelliscope()
+
+view_trelliscope(xtr)
 ```
 
 ## With built JS library

@@ -3,7 +3,7 @@ __loadDisplayInfo__9bdb39b4({
   "description": "life expectancy",
   "tags": [],
   "keycols": ["continent", "country"],
-  "keysig": "1258af3315ef6667a81ac39dc24da591",
+  "keysig": "92b5a8f3d49a441918419a28c2dd895b",
   "metas": [
     {
       "sortable": false,
@@ -32,7 +32,7 @@ __loadDisplayInfo__9bdb39b4({
       "varname": "country"
     },
     {
-      "levels": ["Africa", "Americas", "Asia", "Europe", "Oceania"],
+      "levels": ["Africa", "Americas", "Asia", "Europe", "Oceania", null],
       "sortable": true,
       "filterable": true,
       "tags": ["geography"],
