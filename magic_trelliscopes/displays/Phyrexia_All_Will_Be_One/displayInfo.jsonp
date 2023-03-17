@@ -1,0 +1,520 @@
+__loadDisplayInfo__34d0908e({
+  "name": "Phyrexia All Will Be One",
+  "description": "Phyrexia All Will Be One",
+  "tags": [],
+  "keycols": ["id"],
+  "keysig": null,
+  "metas": [
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "id",
+      "type": "string",
+      "varname": "id"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "name",
+      "type": "string",
+      "varname": "name"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "set",
+      "type": "string",
+      "varname": "set"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "lang",
+      "type": "string",
+      "varname": "lang"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "mana_cost",
+      "type": "string",
+      "varname": "mana_cost"
+    },
+    {
+      "log": false,
+      "locale": true,
+      "digits": 0,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "cmc",
+      "type": "number",
+      "varname": "cmc"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "oracle_text",
+      "type": "string",
+      "varname": "oracle_text"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "power",
+      "type": "string",
+      "varname": "power"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "toughness",
+      "type": "string",
+      "varname": "toughness"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "type_line",
+      "type": "string",
+      "varname": "type_line"
+    },
+    {
+      "log": false,
+      "locale": true,
+      "digits": 0,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "edhrec_rank",
+      "type": "number",
+      "varname": "edhrec_rank"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "layout",
+      "type": "string",
+      "varname": "layout"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "oversized",
+      "type": "string",
+      "varname": "oversized"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "reserved",
+      "type": "string",
+      "varname": "reserved"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "oracle_id",
+      "type": "string",
+      "varname": "oracle_id"
+    },
+    {
+      "log": false,
+      "locale": true,
+      "digits": 0,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "arena_id",
+      "type": "number",
+      "varname": "arena_id"
+    },
+    {
+      "log": false,
+      "locale": true,
+      "digits": 0,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "mtgo_id",
+      "type": "number",
+      "varname": "mtgo_id"
+    },
+    {
+      "log": false,
+      "locale": true,
+      "digits": 0,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "tcgplayer_id",
+      "type": "number",
+      "varname": "tcgplayer_id"
+    },
+    {
+      "log": false,
+      "locale": true,
+      "digits": 0,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "cardmarket_id",
+      "type": "number",
+      "varname": "cardmarket_id"
+    },
+    {
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "uri",
+      "type": "href",
+      "varname": "uri"
+    },
+    {
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "scryfall_uri",
+      "type": "href",
+      "varname": "scryfall_uri"
+    },
+    {
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "rulings_uri",
+      "type": "href",
+      "varname": "rulings_uri"
+    },
+    {
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "prints_search_uri",
+      "type": "href",
+      "varname": "prints_search_uri"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "artist",
+      "type": "string",
+      "varname": "artist"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "booster",
+      "type": "string",
+      "varname": "booster"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "border_color",
+      "type": "string",
+      "varname": "border_color"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "card_back_id",
+      "type": "string",
+      "varname": "card_back_id"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "collector_number",
+      "type": "string",
+      "varname": "collector_number"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "digital",
+      "type": "string",
+      "varname": "digital"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "foil",
+      "type": "string",
+      "varname": "foil"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "nonfoil",
+      "type": "string",
+      "varname": "nonfoil"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "frame",
+      "type": "string",
+      "varname": "frame"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "full_art",
+      "type": "string",
+      "varname": "full_art"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "highres_image",
+      "type": "string",
+      "varname": "highres_image"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "illustration_id",
+      "type": "string",
+      "varname": "illustration_id"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "image_status",
+      "type": "string",
+      "varname": "image_status"
+    },
+    {
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "small",
+      "type": "href",
+      "varname": "small"
+    },
+    {
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "normal",
+      "type": "href",
+      "varname": "normal"
+    },
+    {
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "large",
+      "type": "href",
+      "varname": "large"
+    },
+    {
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "png",
+      "type": "href",
+      "varname": "png"
+    },
+    {
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "art_crop",
+      "type": "href",
+      "varname": "art_crop"
+    },
+    {
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "border_crop",
+      "type": "href",
+      "varname": "border_crop"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "promo",
+      "type": "string",
+      "varname": "promo"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "rarity",
+      "type": "string",
+      "varname": "rarity"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "released_at",
+      "type": "date",
+      "varname": "released_at"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "reprint",
+      "type": "string",
+      "varname": "reprint"
+    },
+    {
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "scryfall_set_uri",
+      "type": "href",
+      "varname": "scryfall_set_uri"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "set_name",
+      "type": "string",
+      "varname": "set_name"
+    },
+    {
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "set_search_uri",
+      "type": "href",
+      "varname": "set_search_uri"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "set_type",
+      "type": "string",
+      "varname": "set_type"
+    },
+    {
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "set_uri",
+      "type": "href",
+      "varname": "set_uri"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "set_id",
+      "type": "string",
+      "varname": "set_id"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "story_spotlight",
+      "type": "string",
+      "varname": "story_spotlight"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "textless",
+      "type": "string",
+      "varname": "textless"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "variation",
+      "type": "string",
+      "varname": "variation"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "flavor_text",
+      "type": "string",
+      "varname": "flavor_text"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "security_stamp",
+      "type": "string",
+      "varname": "security_stamp"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "watermark",
+      "type": "string",
+      "varname": "watermark"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "loyalty",
+      "type": "string",
+      "varname": "loyalty"
+    }
+  ],
+  "state": {
+    "layout": {
+      "page": 1,
+      "arrange": "rows",
+      "ncol": 3,
+      "nrow": 2,
+      "type": "layout"
+    },
+    "labels": {
+      "varnames": ["id"],
+      "type": "labels"
+    },
+    "sort": [],
+    "filter": []
+  },
+  "views": [],
+  "inputs": null,
+  "paneltype": "img",
+  "panelformat": null,
+  "panelaspect": 0.717948717948718,
+  "thumbnailurl": "https://cards.scryfall.io/large/front/3/d/3db6d202-9c6f-4485-9224-173b23de7054.jpg"
+})
