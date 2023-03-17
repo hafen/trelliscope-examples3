@@ -1,0 +1,174 @@
+__loadDisplayInfo__0b40ad3f({
+  "name": "life expectancy",
+  "description": "life expectancy",
+  "tags": [],
+  "keycols": ["continent", "country"],
+  "keysig": "92b5a8f3d49a441918419a28c2dd895b",
+  "metas": [
+    {
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "Wikipedia country page",
+      "type": "href",
+      "varname": "wiki_link"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "country",
+      "type": "string",
+      "varname": "country"
+    },
+    {
+      "levels": ["Africa", "Americas", "Asia", "Europe", "Oceania", null],
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "continent",
+      "type": "factor",
+      "varname": "continent"
+    },
+    {
+      "log": false,
+      "locale": true,
+      "digits": 1,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "mean_lifeexp",
+      "type": "number",
+      "varname": "mean_lifeexp"
+    },
+    {
+      "log": false,
+      "locale": true,
+      "digits": 1,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "min_lifeexp",
+      "type": "number",
+      "varname": "min_lifeexp"
+    },
+    {
+      "log": true,
+      "locale": true,
+      "digits": 0,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "mean_gdp",
+      "type": "number",
+      "varname": "mean_gdp"
+    },
+    {
+      "log": false,
+      "locale": true,
+      "digits": 3,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "test",
+      "type": "number",
+      "varname": "test"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "start_dt",
+      "type": "date",
+      "varname": "start_dt"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "end_dt",
+      "type": "date",
+      "varname": "end_dt"
+    },
+    {
+      "timezone": "UTC",
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "start_dttm",
+      "type": "datetime",
+      "varname": "start_dttm"
+    },
+    {
+      "timezone": "UTC",
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "end_dttm",
+      "type": "datetime",
+      "varname": "end_dttm"
+    },
+    {
+      "log": false,
+      "locale": true,
+      "digits": 1,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "latitude",
+      "type": "number",
+      "varname": "latitude"
+    },
+    {
+      "log": false,
+      "locale": true,
+      "digits": 1,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "longitude",
+      "type": "number",
+      "varname": "longitude"
+    }
+  ],
+  "state": {
+    "layout": {
+      "page": 1,
+      "arrange": "rows",
+      "ncol": 5,
+      "nrow": 3,
+      "type": "layout"
+    },
+    "labels": {
+      "varnames": ["country", "continent", "wiki_link"],
+      "type": "labels"
+    },
+    "sort": [
+      {
+        "dir": "asc",
+        "varname": "continent",
+        "type": "sort"
+      },
+      {
+        "dir": "desc",
+        "varname": "mean_lifeexp",
+        "type": "sort"
+      }
+    ],
+    "filter": [
+      {
+        "max": 50,
+        "min": null,
+        "filtertype": "numberrange",
+        "varname": "mean_lifeexp",
+        "type": "filter"
+      }
+    ]
+  },
+  "views": [],
+  "inputs": null,
+  "paneltype": "img",
+  "panelformat": "svg",
+  "panelaspect": 1.6,
+  "thumbnailurl": "displays/life_expectancy/panels/Asia_Afghanistan.svg"
+})
