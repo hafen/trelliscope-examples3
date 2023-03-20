@@ -1,0 +1,249 @@
+__loadDisplayInfo__4652b0b7({
+  "name": "life expectancy",
+  "description": "life expectancy",
+  "tags": [],
+  "keycols": ["continent", "country"],
+  "keysig": "f89d98ac270b82524c960162d20d425f",
+  "metas": [
+    {
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "Wikipedia country page",
+      "type": "href",
+      "varname": "wiki_link"
+    },
+    {
+      "longvar": "longitude",
+      "latvar": "latitude",
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "geo_centroid",
+      "type": "geo",
+      "varname": "geo_centroid"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": ["geography"],
+      "label": "country",
+      "type": "string",
+      "varname": "country"
+    },
+    {
+      "levels": ["Europe", "Asia", "Oceania", "Africa", "Americas", null],
+      "sortable": true,
+      "filterable": true,
+      "tags": ["geography"],
+      "label": "continent",
+      "type": "factor",
+      "varname": "continent"
+    },
+    {
+      "log": false,
+      "locale": true,
+      "digits": 1,
+      "sortable": true,
+      "filterable": true,
+      "tags": ["statistics", "life expectancy"],
+      "label": "Mean of annual life expectancy",
+      "type": "number",
+      "varname": "mean_lifeexp"
+    },
+    {
+      "log": false,
+      "locale": true,
+      "digits": 1,
+      "sortable": true,
+      "filterable": true,
+      "tags": ["statistics", "life expectancy"],
+      "label": "Lowest observed annual life expectancy",
+      "type": "number",
+      "varname": "min_lifeexp"
+    },
+    {
+      "log": true,
+      "locale": true,
+      "digits": 0,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "mean_gdp",
+      "type": "number",
+      "varname": "mean_gdp"
+    },
+    {
+      "log": false,
+      "locale": true,
+      "digits": 3,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "test",
+      "type": "number",
+      "varname": "test"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "start_dt",
+      "type": "date",
+      "varname": "start_dt"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "end_dt",
+      "type": "date",
+      "varname": "end_dt"
+    },
+    {
+      "timezone": "UTC",
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "start_dttm",
+      "type": "datetime",
+      "varname": "start_dttm"
+    },
+    {
+      "timezone": "UTC",
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "end_dttm",
+      "type": "datetime",
+      "varname": "end_dttm"
+    },
+    {
+      "log": false,
+      "locale": true,
+      "digits": 1,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "latitude",
+      "type": "number",
+      "varname": "latitude"
+    },
+    {
+      "log": false,
+      "locale": true,
+      "digits": 1,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "longitude",
+      "type": "number",
+      "varname": "longitude"
+    }
+  ],
+  "state": {
+    "layout": {
+      "page": 1,
+      "arrange": "rows",
+      "ncol": 5,
+      "nrow": 3,
+      "type": "layout"
+    },
+    "labels": {
+      "varnames": ["country", "continent", "wiki_link"],
+      "type": "labels"
+    },
+    "sort": [
+      {
+        "dir": "asc",
+        "varname": "continent",
+        "type": "sort"
+      },
+      {
+        "dir": "desc",
+        "varname": "mean_lifeexp",
+        "type": "sort"
+      }
+    ],
+    "filter": [
+      {
+        "values": ["Africa"],
+        "regexp": null,
+        "filtertype": "category",
+        "varname": "continent",
+        "type": "filter"
+      },
+      {
+        "max": 50,
+        "min": null,
+        "filtertype": "numberrange",
+        "varname": "mean_lifeexp",
+        "type": "filter"
+      }
+    ]
+  },
+  "views": [
+    {
+      "name": "Countries with high life expectancy (min >= 60)",
+      "state": {
+        "layout": {
+          "page": 1,
+          "arrange": "rows",
+          "ncol": 3,
+          "nrow": 2,
+          "type": "layout"
+        },
+        "labels": {
+          "varnames": ["continent", "country"],
+          "type": "labels"
+        },
+        "sort": [
+          {
+            "dir": "desc",
+            "varname": "min_lifeexp",
+            "type": "sort"
+          }
+        ],
+        "filter": [
+          {
+            "max": null,
+            "min": 60,
+            "filtertype": "numberrange",
+            "varname": "min_lifeexp",
+            "type": "filter"
+          }
+        ]
+      }
+    }
+  ],
+  "inputs": {
+    "inputs": [
+      {
+        "height": 6,
+        "width": 100,
+        "type": "text",
+        "active": true,
+        "label": "Comments about this panel",
+        "name": "comments"
+      },
+      {
+        "options": ["no", "yes"],
+        "type": "radio",
+        "active": true,
+        "label": "Does the data look correct?",
+        "name": "looks_correct"
+      }
+    ],
+    "storageInterface": {
+      "type": "localStorage"
+    },
+    "feedbackInterface": {
+      "feedbackEmail": "johndoe123@fakemail.net",
+      "includeMetaVars": []
+    }
+  },
+  "paneltype": "img",
+  "panelformat": "svg",
+  "panelaspect": null,
+  "thumbnailurl": "displays/life_expectancy/panels/NA_NA.svg"
+})

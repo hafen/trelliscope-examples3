@@ -291,6 +291,117 @@ xtr <- x |>
 view_trelliscope(xtr)
 ```
 
+```r
+library(scryr)
+
+one_cards <- scry_cards("(game:paper) set:one") |>
+  unnest(cols = image_uris) |>
+  ungroup()
+
+plots <- one_cards |>
+  mutate(image_url = img_panel(substr(large, 1, 82), aspect_ratio = 672 / 936)) |>
+  as_trelliscope_df(
+    name = "Phyrexia All Will Be One", 
+    path = "magic_trelliscopes")
+
+plots <- plots |>
+  write_trelliscope()
+
+view_trelliscope(plots)
+```
+
+
+## Missing values, etc.
+
+```r
+scramble <- function(x)
+  x + sample(-10:10, length(x), replace = TRUE)
+cent <- readr::read_csv("country_centroids.csv")
+
+gapminder2 <- gapminder
+gapminder2$country[c(1, 65, 89, 234)] <- NA
+gapminder2$continent[c(1, 10, 231, 47)] <- NA
+
+p <- (ggplot(aes(year, lifeExp), data = gapminder2) +
+  geom_point() +
+  theme_minimal() +
+  facet_panels(~ continent + country)) |>
+  nest_panels()
+
+set.seed(1234)
+stats <- gapminder2 |>
+  mutate(
+    yeardate = as.Date(paste0(year, "-01-01")),
+  ) |>
+  group_by(country, continent) |>
+  summarise(
+    mean_lifeexp = mean(lifeExp),
+    min_lifeexp = min(lifeExp),
+    mean_gdp = mean(gdpPercap),
+    test = log10(mean(gdpPercap)),
+    start_dt = scramble(min(yeardate)),
+    end_dt = scramble(max(yeardate)),
+    start_dttm = as.POSIXct(start_dt),
+    end_dttm = as.POSIXct(end_dt),
+    wiki_link = paste0("https://en.wikipedia.org/wiki/", country[1]),
+    .groups = "drop"
+  ) %>%
+  left_join(select(cent, -country), by = c(country = "name"))
+
+x <- left_join(p, stats, by = c("country", "continent"))
+
+levels(x$continent) <- c("Europe", "Asia", "Oceania", "Africa", "Americas")
+x$mean_lifeexp[c(23, 67, 19)] <- NA
+x$start_dttm[c(25, 68, 90)] <- NA
+x$wiki_link[is.na(x$country)] <- NA
+x$start_dt[c(25, 68, 90)] <- NA
+
+xtr <- x |>
+  as_trelliscope_df(name = "life expectancy", path = "gapminder_crossfilter") |>
+  write_panels(width = 800, height = 500, format = "svg") |>
+  add_meta_defs(
+    # meta_currency("mean_gdp",
+    #   label = "Mean of annual GDP per capita (US$, inflation-adjusted)",
+    #   tags = c("statistics", "GDP")),
+    meta_href("wiki_link", label = "Wikipedia country page"),
+    meta_geo("geo_centroid", latvar = "latitude", longvar = "longitude")
+  ) |>
+  add_meta_labels(
+    mean_lifeexp = "Mean of annual life expectancy",
+    min_lifeexp = "Lowest observed annual life expectancy"
+  ) |>
+  add_meta_tags(
+    mean_lifeexp = c("statistics", "life expectancy"),
+    min_lifeexp = c("statistics", "life expectancy"),
+    country = "geography",
+    continent = "geography"
+  ) |>
+  set_default_labels(c("country", "continent", "wiki_link")) |>
+  set_default_layout(nrow = 3, ncol = 5) |>
+  set_default_sort(c("continent", "mean_lifeexp"), dir = c("asc", "desc")) |>
+  set_default_filters(
+    filter_string("continent", values = "Africa"),
+    filter_range("mean_lifeexp", max = 50)
+  ) |>
+  add_view(
+    name = "Countries with high life expectancy (min >= 60)",
+    filter_range("min_lifeexp", min = 60),
+    state_sort("min_lifeexp", dir = "desc")
+  ) |>
+  add_inputs(
+    input_text(name = "comments", label = "Comments about this panel",
+      width = 100, height = 6),
+    input_radio(name = "looks_correct",
+      label = "Does the data look correct?", options = c("no", "yes"))
+  ) |>
+  add_input_email("johndoe123@fakemail.net") |>
+  write_trelliscope()
+
+view_trelliscope(xtr)
+```
+
+
+
 ## With built JS library
 
 
