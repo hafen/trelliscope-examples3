@@ -1,0 +1,102 @@
+__loadDisplayInfo__c060b1f7({
+  "name": "Mars Rover Photos",
+  "description": "Image data gathered by NASA's Curiosity, Opportunity, and Spirit rovers on Mars",
+  "tags": [],
+  "keycols": ["id"],
+  "keysig": null,
+  "metas": [
+    {
+      "log": false,
+      "locale": true,
+      "digits": 0,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "id",
+      "type": "number",
+      "varname": "id"
+    },
+    {
+      "log": false,
+      "locale": true,
+      "digits": 0,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "sol",
+      "type": "number",
+      "varname": "sol"
+    },
+    {
+      "log": false,
+      "locale": true,
+      "digits": 0,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "camera_id",
+      "type": "number",
+      "varname": "camera_id"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "earth_date",
+      "type": "date",
+      "varname": "earth_date"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "rover_name",
+      "type": "string",
+      "varname": "rover_name"
+    },
+    {
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "camera",
+      "type": "string",
+      "varname": "camera"
+    }
+  ],
+  "state": {
+    "layout": {
+      "page": 1,
+      "arrange": "rows",
+      "ncol": 5,
+      "nrow": 1,
+      "type": "layout"
+    },
+    "labels": {
+      "varnames": ["rover_name", "camera", "earth_date"],
+      "type": "labels"
+    },
+    "sort": [],
+    "filter": [
+      {
+        "max": null,
+        "min": 3000,
+        "filtertype": "numberrange",
+        "varname": "sol",
+        "type": "filter"
+      },
+      {
+        "values": ["Curiosity"],
+        "regexp": null,
+        "filtertype": "category",
+        "varname": "rover_name",
+        "type": "filter"
+      }
+    ]
+  },
+  "views": [],
+  "inputs": null,
+  "paneltype": "img",
+  "panelformat": null,
+  "panelaspect": 1,
+  "thumbnailurl": "http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/00000/opgs/edr/fcam/FRA_397502305EDR_D0010000AUT_04096M_.JPG"
+})
