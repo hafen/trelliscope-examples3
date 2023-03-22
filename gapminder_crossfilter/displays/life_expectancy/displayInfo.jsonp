@@ -3,7 +3,7 @@ __loadDisplayInfo__4652b0b7({
   "description": "life expectancy",
   "tags": [],
   "keycols": ["continent", "country"],
-  "keysig": "f89d98ac270b82524c960162d20d425f",
+  "keysig": "2f634a26cc603cb1a9c3de561536f036",
   "metas": [
     {
       "sortable": false,
@@ -144,9 +144,7 @@ __loadDisplayInfo__4652b0b7({
   "state": {
     "layout": {
       "page": 1,
-      "arrange": "rows",
       "ncol": 5,
-      "nrow": 3,
       "type": "layout"
     },
     "labels": {
@@ -188,9 +186,7 @@ __loadDisplayInfo__4652b0b7({
       "state": {
         "layout": {
           "page": 1,
-          "arrange": "rows",
           "ncol": 3,
-          "nrow": 2,
           "type": "layout"
         },
         "labels": {
@@ -244,6 +240,9 @@ __loadDisplayInfo__4652b0b7({
   },
   "paneltype": "img",
   "panelformat": "svg",
-  "panelaspect": null,
+  "panelaspect": 1.6,
+  "panelsource": {
+    "type": "file"
+  },
   "thumbnailurl": "displays/life_expectancy/panels/NA_NA.svg"
 })
