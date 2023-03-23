@@ -153,11 +153,13 @@ __loadDisplayInfo__4652b0b7({
     },
     "sort": [
       {
+        "metatype": "factor",
         "dir": "asc",
         "varname": "continent",
         "type": "sort"
       },
       {
+        "metatype": "number",
         "dir": "desc",
         "varname": "mean_lifeexp",
         "type": "sort"
@@ -167,6 +169,7 @@ __loadDisplayInfo__4652b0b7({
       {
         "values": ["Africa"],
         "regexp": null,
+        "metatype": "factor",
         "filtertype": "category",
         "varname": "continent",
         "type": "filter"
@@ -174,6 +177,7 @@ __loadDisplayInfo__4652b0b7({
       {
         "max": 50,
         "min": null,
+        "metatype": "number",
         "filtertype": "numberrange",
         "varname": "mean_lifeexp",
         "type": "filter"
@@ -195,6 +199,7 @@ __loadDisplayInfo__4652b0b7({
         },
         "sort": [
           {
+            "metatype": "number",
             "dir": "desc",
             "varname": "min_lifeexp",
             "type": "sort"
@@ -204,6 +209,7 @@ __loadDisplayInfo__4652b0b7({
           {
             "max": null,
             "min": 60,
+            "metatype": "number",
             "filtertype": "numberrange",
             "varname": "min_lifeexp",
             "type": "filter"

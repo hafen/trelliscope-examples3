@@ -98,7 +98,7 @@ xtr <- x |>
     continent = "geography"
   ) |>
   set_default_labels(c("country", "continent", "wiki_link")) |>
-  set_default_layout(nrow = 3, ncol = 5) |>
+  set_default_layout(ncol = 5) |>
   set_default_sort(c("continent", "mean_lifeexp"), dir = c("asc", "desc")) |>
   set_default_filters(
     filter_string("continent", values = "Africa"),
@@ -215,7 +215,7 @@ x3 <- nodedat |>
   as_trelliscope_df(name = "connections",
     path = "network_nonraster") |>
   write_panels(width = 500, height = 500) |>
-  set_default_layout(nrow = 2, ncol = 4) |>
+  set_default_layout(ncol = 4) |>
   write_trelliscope()
 
 view_trelliscope(x3)
@@ -234,7 +234,7 @@ pokemon |>
 pk <- pokemon |>
   mutate(panel = img_panel(url_image)) |>
   as_trelliscope_df(name = "pokemon", path = "pokemon") |>
-  set_default_layout(nrow = 3, ncol = 6) |>
+  set_default_layout(ncol = 6) |>
   write_trelliscope()
 
 view_trelliscope(pk)
@@ -281,7 +281,7 @@ xtr <- x |>
     meta_href("wiki_link", label = "Wikipedia country page")
   ) |>
   set_default_labels(c("country", "continent", "wiki_link")) |>
-  set_default_layout(nrow = 3, ncol = 5) |>
+  set_default_layout(ncol = 5) |>
   set_default_sort(c("continent", "mean_lifeexp"), dir = c("asc", "desc")) |>
   set_default_filters(
     filter_range("mean_lifeexp", max = 50)
@@ -350,7 +350,8 @@ stats <- gapminder2 |>
 
 x <- left_join(p, stats, by = c("country", "continent"))
 
-levels(x$continent) <- c("Europe", "Asia", "Oceania", "Africa", "Americas")
+x$continent <- factor(x$continent,
+  levels = c("Europe", "Asia", "Oceania", "Africa", "Americas"))
 x$mean_lifeexp[c(23, 67, 19)] <- NA
 x$start_dttm[c(25, 68, 90)] <- NA
 x$wiki_link[is.na(x$country)] <- NA
@@ -377,7 +378,7 @@ xtr <- x |>
     continent = "geography"
   ) |>
   set_default_labels(c("country", "continent", "wiki_link")) |>
-  set_default_layout(nrow = 3, ncol = 5) |>
+  set_default_layout(ncol = 5) |>
   set_default_sort(c("continent", "mean_lifeexp"), dir = c("asc", "desc")) |>
   set_default_filters(
     filter_string("continent", values = "Africa"),
