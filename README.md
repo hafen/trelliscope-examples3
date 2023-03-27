@@ -131,7 +131,7 @@ On this same topic, there is the notion of "related displays", where if you crea
 
 For example, we can create two displays with the gapminder data, one with life expectancy vs. time and another with GBP vs. time:
 
-```r
+```{r}
 x1 <- (ggplot(gapminder, aes(year, lifeExp)) +
   geom_point() +
   xlim(1948, 2011) + ylim(10, 95) + theme_minimal() +
@@ -168,7 +168,7 @@ The app knows which panels from the two different displays to show based on its 
 
 ## Panels that are not raster images
 
-```r
+```{r}
 library(visNetwork)
 
 nnodes <- 100
@@ -223,13 +223,11 @@ view_trelliscope(x3)
 
 ## Image panels
 
-```r
+```{r}
 load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_7261/datasets/pokemon.Rdata"))
-
 
 pokemon |>
   mutate(evolves_from_species_id = as.integer(evolves_from_species_id))
-
 
 pk <- pokemon |>
   mutate(panel = img_panel(url_image)) |>
@@ -240,58 +238,9 @@ pk <- pokemon |>
 view_trelliscope(pk)
 ```
 
-## Missing values
+## More image panels
 
-```r
-gapminder2 <- gapminder
-gapminder2$country[c(2, 456, 78, 23, 789, 132)] <- NA
-gapminder2$continent[c(543, 567, 12, 89, 7, 234)] <- NA
-
-p <- (ggplot(aes(year, lifeExp), data = gapminder2) +
-  geom_point() +
-  theme_minimal() +
-  facet_panels(~ continent + country)) |>
-  nest_panels()
-
-stats <- gapminder2 |>
-  mutate(
-    yeardate = as.Date(paste0(year, "-01-01")),
-  ) |>
-  group_by(country, continent) |>
-  summarise(
-    mean_lifeexp = mean(lifeExp),
-    min_lifeexp = min(lifeExp),
-    mean_gdp = mean(gdpPercap),
-    test = log10(mean(gdpPercap)),
-    start_dt = scramble(min(yeardate)),
-    end_dt = scramble(max(yeardate)),
-    start_dttm = as.POSIXct(start_dt),
-    end_dttm = as.POSIXct(end_dt),
-    wiki_link = paste0("https://en.wikipedia.org/wiki/", country[1]),
-    .groups = "drop"
-  ) %>%
-  left_join(select(cent, -country), by = c(country = "name"))
-
-x <- left_join(p, stats, by = c("country", "continent"))
-
-xtr <- x |>
-  as_trelliscope_df(name = "life expectancy", path = "gapminder_na") |>
-  write_panels(width = 800, height = 500, format = "svg") |>
-  add_meta_defs(
-    meta_href("wiki_link", label = "Wikipedia country page")
-  ) |>
-  set_default_labels(c("country", "continent", "wiki_link")) |>
-  set_default_layout(ncol = 5) |>
-  set_default_sort(c("continent", "mean_lifeexp"), dir = c("asc", "desc")) |>
-  set_default_filters(
-    filter_range("mean_lifeexp", max = 50)
-  ) |>
-  write_trelliscope()
-
-view_trelliscope(xtr)
-```
-
-```r
+```{r}
 library(scryr)
 
 one_cards <- scry_cards("(game:paper) set:one") |>
@@ -310,10 +259,9 @@ plots <- plots |>
 view_trelliscope(plots)
 ```
 
-
 ## Missing values, etc.
 
-```r
+```{r}
 scramble <- function(x)
   x + sample(-10:10, length(x), replace = TRUE)
 cent <- readr::read_csv("country_centroids.csv")
@@ -401,7 +349,72 @@ xtr <- x |>
 view_trelliscope(xtr)
 ```
 
+## Extra inputs
 
+```{r}
+p <- (ggplot(aes(year, lifeExp), data = gapminder) +
+  geom_point() +
+  theme_minimal() +
+  facet_panels(~ continent + country)) |>
+  nest_panels() |>
+  as_trelliscope_df(name = "inputs test", path = "inputs_test") |>
+  write_panels(format = "svg") |>
+  add_inputs(
+    input_text(name = "comments", label = "Comments about this panel",
+      width = 100, height = 6),
+    input_radio(name = "looks_correct",
+      label = "Does the data look correct?", options = c("no", "yes")),
+    input_select(name = "rating",
+      label = "How would you rate this?", options = c("bad", "meh", "good")),
+    input_multiselect(name = "feelings",
+      label = "How does this make you feel (choose all that apply)",
+      options = c("happy", "sad", "indifferent", "excited", "bored")),
+    input_number(name = "num_rating",
+      label = "Enter a rating from 1-10", min = 0, max = 10),
+    input_number(name = "random_num",
+      label = "Enter a random number"),
+    input_checkbox(name = "looks_correct_cb",
+      label = "Does the data look correct?", options = c("no", "yes"))
+  ) |>
+  set_default_labels(c("comments", "looks_correct", "rating", "feelings",
+    "num_rating", "random_num", "looks_correct_cb")
+  ) |>
+  set_default_layout(ncol = 1) |>
+  add_input_email("johndoe123@fakemail.net") |>
+  write_trelliscope()
+
+view_trelliscope(p)
+```
+
+## Large number of image panels
+
+```{r}
+d <- readr::read_rds("_scripts/mars-rover/data/all.rds")
+
+d2 <- d %>%
+  filter(nchar(img_src) != 63) %>%
+  mutate(
+    img_src = img_panel(img_src, aspect_ratio = 1),
+    earth_date = as.Date(earth_date),
+    camera = camera_full_name
+  ) %>%
+  select(-camera_name, -camera_full_name) %>%
+  as_trelliscope_df(
+    name = "Mars Rover Photos",
+    description = "Image data gathered by NASA's Curiosity, Opportunity, and Spirit rovers on Mars",
+    path = "mars",
+    key_cols = "id"
+  ) %>%
+  set_default_layout(ncol = 5) %>%
+  set_default_filters(
+    filter_range("sol", min = 3000),
+    filter_string("rover_name", values = "Curiosity")
+  ) %>%
+  set_default_labels(c("rover_name", "camera", "earth_date"))
+
+write_trelliscope(d2)
+view_trelliscope(d2)
+```
 
 ## With built JS library
 

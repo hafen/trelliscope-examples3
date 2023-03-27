@@ -1,4 +1,4 @@
-__loadDisplayInfo__c060b1f7({
+__loadDisplayInfo__8b1358d2({
   "name": "Mars Rover Photos",
   "description": "Image data gathered by NASA's Curiosity, Opportunity, and Spirit rovers on Mars",
   "tags": [],
@@ -66,9 +66,7 @@ __loadDisplayInfo__c060b1f7({
   "state": {
     "layout": {
       "page": 1,
-      "arrange": "rows",
       "ncol": 5,
-      "nrow": 1,
       "type": "layout"
     },
     "labels": {
@@ -80,6 +78,7 @@ __loadDisplayInfo__c060b1f7({
       {
         "max": null,
         "min": 3000,
+        "metatype": "number",
         "filtertype": "numberrange",
         "varname": "sol",
         "type": "filter"
@@ -87,6 +86,7 @@ __loadDisplayInfo__c060b1f7({
       {
         "values": ["Curiosity"],
         "regexp": null,
+        "metatype": "string",
         "filtertype": "category",
         "varname": "rover_name",
         "type": "filter"
@@ -98,5 +98,8 @@ __loadDisplayInfo__c060b1f7({
   "paneltype": "img",
   "panelformat": null,
   "panelaspect": 1,
+  "panelsource": {
+    "type": "file"
+  },
   "thumbnailurl": "http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/00000/opgs/edr/fcam/FRA_397502305EDR_D0010000AUT_04096M_.JPG"
 })
