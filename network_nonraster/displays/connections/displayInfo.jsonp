@@ -1,4 +1,4 @@
-__loadDisplayInfo__0db7d0c1({
+__loadDisplayInfo__57a04daa({
   "name": "connections",
   "description": "connections",
   "tags": [],
@@ -42,9 +42,7 @@ __loadDisplayInfo__0db7d0c1({
   "state": {
     "layout": {
       "page": 1,
-      "arrange": "rows",
       "ncol": 4,
-      "nrow": 2,
       "type": "layout"
     },
     "labels": {
@@ -59,5 +57,8 @@ __loadDisplayInfo__0db7d0c1({
   "paneltype": "iframe",
   "panelformat": "html",
   "panelaspect": 1,
+  "panelsource": {
+    "type": "file"
+  },
   "thumbnailurl": "displays/connections/panels/95.html"
 })

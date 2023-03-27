@@ -1,9 +1,9 @@
-__loadDisplayInfo__9bdb39b4({
+__loadDisplayInfo__28e6ec24({
   "name": "life expectancy",
   "description": "life expectancy",
   "tags": [],
   "keycols": ["continent", "country"],
-  "keysig": "92b5a8f3d49a441918419a28c2dd895b",
+  "keysig": "1258af3315ef6667a81ac39dc24da591",
   "metas": [
     {
       "sortable": false,
@@ -32,7 +32,7 @@ __loadDisplayInfo__9bdb39b4({
       "varname": "country"
     },
     {
-      "levels": ["Africa", "Americas", "Asia", "Europe", "Oceania", null],
+      "levels": ["Africa", "Americas", "Asia", "Europe", "Oceania"],
       "sortable": true,
       "filterable": true,
       "tags": ["geography"],
@@ -144,9 +144,7 @@ __loadDisplayInfo__9bdb39b4({
   "state": {
     "layout": {
       "page": 1,
-      "arrange": "rows",
       "ncol": 5,
-      "nrow": 3,
       "type": "layout"
     },
     "labels": {
@@ -155,11 +153,13 @@ __loadDisplayInfo__9bdb39b4({
     },
     "sort": [
       {
+        "metatype": "factor",
         "dir": "asc",
         "varname": "continent",
         "type": "sort"
       },
       {
+        "metatype": "number",
         "dir": "desc",
         "varname": "mean_lifeexp",
         "type": "sort"
@@ -167,8 +167,9 @@ __loadDisplayInfo__9bdb39b4({
     ],
     "filter": [
       {
-        "values": ["Africa"],
+        "values": [1],
         "regexp": null,
+        "metatype": "factor",
         "filtertype": "category",
         "varname": "continent",
         "type": "filter"
@@ -176,6 +177,7 @@ __loadDisplayInfo__9bdb39b4({
       {
         "max": 50,
         "min": null,
+        "metatype": "number",
         "filtertype": "numberrange",
         "varname": "mean_lifeexp",
         "type": "filter"
@@ -188,9 +190,7 @@ __loadDisplayInfo__9bdb39b4({
       "state": {
         "layout": {
           "page": 1,
-          "arrange": "rows",
           "ncol": 3,
-          "nrow": 2,
           "type": "layout"
         },
         "labels": {
@@ -199,6 +199,7 @@ __loadDisplayInfo__9bdb39b4({
         },
         "sort": [
           {
+            "metatype": "number",
             "dir": "desc",
             "varname": "min_lifeexp",
             "type": "sort"
@@ -208,6 +209,7 @@ __loadDisplayInfo__9bdb39b4({
           {
             "max": null,
             "min": 60,
+            "metatype": "number",
             "filtertype": "numberrange",
             "varname": "min_lifeexp",
             "type": "filter"
@@ -245,5 +247,8 @@ __loadDisplayInfo__9bdb39b4({
   "paneltype": "img",
   "panelformat": "svg",
   "panelaspect": 1.6,
+  "panelsource": {
+    "type": "file"
+  },
   "thumbnailurl": "displays/life_expectancy/panels/Asia_Afghanistan.svg"
 })

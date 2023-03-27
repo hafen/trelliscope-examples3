@@ -1,4 +1,4 @@
-__loadDisplayInfo__2bc3fb8f({
+__loadDisplayInfo__6cff4092({
   "name": "Phyrexia All Will Be One",
   "description": "Phyrexia All Will Be One",
   "tags": [],
@@ -499,9 +499,7 @@ __loadDisplayInfo__2bc3fb8f({
   "state": {
     "layout": {
       "page": 1,
-      "arrange": "rows",
       "ncol": 3,
-      "nrow": 2,
       "type": "layout"
     },
     "labels": {
@@ -516,5 +514,8 @@ __loadDisplayInfo__2bc3fb8f({
   "paneltype": "img",
   "panelformat": null,
   "panelaspect": 0.717948717948718,
+  "panelsource": {
+    "type": "file"
+  },
   "thumbnailurl": "https://cards.scryfall.io/large/front/3/d/3db6d202-9c6f-4485-9224-173b23de7054.jpg"
 })

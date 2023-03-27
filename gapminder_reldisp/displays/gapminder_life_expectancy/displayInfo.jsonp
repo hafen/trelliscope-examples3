@@ -1,4 +1,4 @@
-__loadDisplayInfo__59a3c606({
+__loadDisplayInfo__0c8b1613({
   "name": "gapminder_life_expectancy",
   "description": "life expectancy vs. year by country using Gapminder data",
   "tags": [],
@@ -27,9 +27,7 @@ __loadDisplayInfo__59a3c606({
   "state": {
     "layout": {
       "page": 1,
-      "arrange": "rows",
       "ncol": 3,
-      "nrow": 2,
       "type": "layout"
     },
     "labels": {
@@ -44,5 +42,8 @@ __loadDisplayInfo__59a3c606({
   "paneltype": "img",
   "panelformat": "svg",
   "panelaspect": 1.6,
+  "panelsource": {
+    "type": "file"
+  },
   "thumbnailurl": "displays/gapminder_life_expectancy/panels/Afghanistan_Asia.svg"
 })

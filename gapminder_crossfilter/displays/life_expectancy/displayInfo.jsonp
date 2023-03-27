@@ -1,4 +1,4 @@
-__loadDisplayInfo__4652b0b7({
+__loadDisplayInfo__594e0d0e({
   "name": "life expectancy",
   "description": "life expectancy",
   "tags": [],
@@ -167,7 +167,7 @@ __loadDisplayInfo__4652b0b7({
     ],
     "filter": [
       {
-        "values": ["Africa"],
+        "values": [4],
         "regexp": null,
         "metatype": "factor",
         "filtertype": "category",

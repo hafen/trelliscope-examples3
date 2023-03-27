@@ -1,4 +1,4 @@
-__loadDisplayInfo__21c8a925({
+__loadDisplayInfo__dc0c8f9e({
   "name": "pokemon",
   "description": "pokemon",
   "tags": [],
@@ -279,9 +279,7 @@ __loadDisplayInfo__21c8a925({
   "state": {
     "layout": {
       "page": 1,
-      "arrange": "rows",
       "ncol": 6,
-      "nrow": 3,
       "type": "layout"
     },
     "labels": {
@@ -296,5 +294,8 @@ __loadDisplayInfo__21c8a925({
   "paneltype": "img",
   "panelformat": null,
   "panelaspect": 1.5,
+  "panelsource": {
+    "type": "file"
+  },
   "thumbnailurl": "http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
 })

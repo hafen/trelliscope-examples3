@@ -1,0 +1,111 @@
+__loadDisplayInfo__16c2f76f({
+  "name": "inputs test",
+  "description": "inputs test",
+  "tags": [],
+  "keycols": ["continent", "country"],
+  "keysig": "1258af3315ef6667a81ac39dc24da591",
+  "metas": [
+    {
+      "levels": ["Afghanistan", "Albania", "Algeria", "Angola", "Argentina", "Australia", "Austria", "Bahrain", "Bangladesh", "Belgium", "Benin", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo, Dem. Rep.", "Congo, Rep.", "Costa Rica", "Cote d'Ivoire", "Croatia", "Cuba", "Czech Republic", "Denmark", "Djibouti", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Ethiopia", "Finland", "France", "Gabon", "Gambia", "Germany", "Ghana", "Greece", "Guatemala", "Guinea", "Guinea-Bissau", "Haiti", "Honduras", "Hong Kong, China", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kenya", "Korea, Dem. Rep.", "Korea, Rep.", "Kuwait", "Lebanon", "Lesotho", "Liberia", "Libya", "Madagascar", "Malawi", "Malaysia", "Mali", "Mauritania", "Mauritius", "Mexico", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Panama", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Reunion", "Romania", "Rwanda", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Sierra Leone", "Singapore", "Slovak Republic", "Slovenia", "Somalia", "South Africa", "Spain", "Sri Lanka", "Sudan", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tanzania", "Thailand", "Togo", "Trinidad and Tobago", "Tunisia", "Turkey", "Uganda", "United Kingdom", "United States", "Uruguay", "Venezuela", "Vietnam", "West Bank and Gaza", "Yemen, Rep.", "Zambia", "Zimbabwe"],
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "country",
+      "type": "factor",
+      "varname": "country"
+    },
+    {
+      "levels": ["Africa", "Americas", "Asia", "Europe", "Oceania"],
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "continent",
+      "type": "factor",
+      "varname": "continent"
+    }
+  ],
+  "state": {
+    "layout": {
+      "page": 1,
+      "ncol": 1,
+      "type": "layout"
+    },
+    "labels": {
+      "varnames": ["comments", "looks_correct", "rating", "feelings", "num_rating", "random_num", "looks_correct_cb"],
+      "type": "labels"
+    },
+    "sort": [],
+    "filter": []
+  },
+  "views": [],
+  "inputs": {
+    "inputs": [
+      {
+        "height": 6,
+        "width": 100,
+        "type": "text",
+        "active": true,
+        "label": "Comments about this panel",
+        "name": "comments"
+      },
+      {
+        "options": ["no", "yes"],
+        "type": "radio",
+        "active": true,
+        "label": "Does the data look correct?",
+        "name": "looks_correct"
+      },
+      {
+        "options": ["bad", "meh", "good"],
+        "type": "select",
+        "active": true,
+        "label": "How would you rate this?",
+        "name": "rating"
+      },
+      {
+        "options": ["happy", "sad", "indifferent", "excited", "bored"],
+        "type": "multiselect",
+        "active": true,
+        "label": "How does this make you feel (choose all that apply)",
+        "name": "feelings"
+      },
+      {
+        "max": 10,
+        "min": 0,
+        "type": "number",
+        "active": true,
+        "label": "Enter a rating from 1-10",
+        "name": "num_rating"
+      },
+      {
+        "max": null,
+        "min": null,
+        "type": "number",
+        "active": true,
+        "label": "Enter a random number",
+        "name": "random_num"
+      },
+      {
+        "options": ["no", "yes"],
+        "type": "checkbox",
+        "active": true,
+        "label": "Does the data look correct?",
+        "name": "looks_correct_cb"
+      }
+    ],
+    "storageInterface": {
+      "type": "localStorage"
+    },
+    "feedbackInterface": {
+      "feedbackEmail": "johndoe123@fakemail.net",
+      "includeMetaVars": []
+    }
+  },
+  "paneltype": "img",
+  "panelformat": "svg",
+  "panelaspect": 1,
+  "panelsource": {
+    "type": "file"
+  },
+  "thumbnailurl": "displays/inputs_test/panels/Asia_Afghanistan.svg"
+})
