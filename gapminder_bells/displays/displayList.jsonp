@@ -1,9 +1,9 @@
-__loadDisplayList__28e6ec24([
+__loadDisplayList__389b2253([
   {
     "name": "life expectancy",
     "description": "life expectancy",
     "tags": [],
-    "keysig": "1258af3315ef6667a81ac39dc24da591",
+    "keysig": "a5bb63fd45a579c19ebd950c9fb99eab",
     "thumbnailurl": "displays/life_expectancy/panels/Asia_Afghanistan.svg"
   }
 ])
